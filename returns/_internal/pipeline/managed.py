@@ -1,4 +1,15 @@
-from typing import Callable, TypeVar
+from typing imp    use: Callable[
+        [_FirstType],
+        KindN[_IOResultLikeType, _UpdatedType, _SecondType, _ThirdType],
+    ],
+    release: Callable[
+        [_FirstType, Result[_UpdatedType, _SecondType]],
+        KindN[_IOResultLikeType, None, _SecondType, _ThirdType],
+    ],
+) -> Kinded[Callable[
+    [KindN[_IOResultLikeType, _FirstType, _SecondType, _ThirdType]],
+    KindN[_IOResultLikeType, _UpdatedType, _SecondType, _ThirdType],
+]]:, TypeVar
 
 from returns.interfaces.specific.ioresult import IOResultLikeN
 from returns.primitives.hkt import Kinded, KindN, kinded

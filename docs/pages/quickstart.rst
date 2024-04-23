@@ -2,7 +2,18 @@ Quickstart
 ==========
 
 Starting is really fast!
-You can integrate ``returns`` into any project at any stage.
+You can int-----------------------------------
+
+This step is optional.
+If you use `mypy` for type-checking, then you will need to configure it.
+We really recommend using `mypy` with this project though.
+Because we have put a lot of efforts into the typing part.
+
+Check out our docs on :ref:`mypy <mypy-plugins>`.
+
+We also have built-in integrations
+with :ref:`pytest <pytest-plugins>` and :ref:`hypothesis <hypothesis-plugins>`.
+Also, there is :ref:`developer tooling <development-tooling>` you might enjoy.urns`` into any project at any stage.
 You can use it fully or partially. With or without types.
 
 ``returns`` is a very flexible library!
