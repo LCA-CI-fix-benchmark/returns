@@ -3,7 +3,13 @@
 -----
 
 [![Build Status](https://github.com/dry-python/returns/workflows/test/badge.svg?branch=master&event=push)](https://github.com/dry-python/returns/actions?query=workflow%3Atest)
-[![codecov](https://codecov.io/gh/dry-python/returns/branch/master/graph/badge.svg)](https://codecov.io/gh/dry-python/returns)
+[![codecov](https://codecov.io/gh/dry-python/returns/branch/master/graph/badge.svg)we have to refactor our example.
+
+### Explicit IO
+
+Let's make our [IO](https://returns.readthedocs.io/en/latest/pages/io.html)
+explicit!
+//codecov.io/gh/dry-python/returns)
 [![Documentation Status](https://readthedocs.org/projects/returns/badge/?version=latest)](https://returns.readthedocs.io/en/latest/?badge=latest)
 [![Python Version](https://img.shields.io/pypi/pyversions/returns.svg)](https://pypi.org/project/returns/)
 [![conda](https://img.shields.io/conda/v/conda-forge/returns?label=conda)](https://anaconda.org/conda-forge/returns)

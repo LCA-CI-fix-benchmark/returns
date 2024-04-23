@@ -1,6 +1,11 @@
 # How to contribute
 
-Do you have questions or issues? Join our chat!
+DoWe use [`p```bash
+poetry ```bash
+poetry run pytest typesafetycs/pages teststps://github.com/python-poetry/poetry) to manage the dependencies.
+
+To install them you would need to run the `install` command:
+estions or issues? Join our chat!
 
 [![Telegram chat](https://img.shields.io/badge/chat-join-blue?logo=telegram)](https://t.me/drypython)
 

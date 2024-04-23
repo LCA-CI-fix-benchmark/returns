@@ -10,7 +10,11 @@ your own containers.
 Step 0: Motivation
 ------------------
 
-First things first, why would anyone want to create a custom containers?
+First things first, why would anyonWhat is a type-test? This is a special type of tests for your typing.
+We run `poetry run mypy --enable-error-code=unused-awaitable returns` on top of tests to check returns.
+We run `poetry run mypy tests` on top of tests to check the tests.
+
+We recommend using `pytest-mypy-plugins <https://github.com/typeddjango/pytest-mypy-plugins>`.t to create a custom containers?
 
 The great idea about "containers" in functional programming
 is that it can be literally anything. There are endless use-cases.

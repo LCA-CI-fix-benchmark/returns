@@ -1,5 +1,10 @@
 """
-This module is special.
+This mbased on the used ``KindN`` instance,
+we need to have two separate interfaces for two separate use-cases:
+- ``ReaderLike2`` is used for types where the second type argument is ``env``
+- ``ReaderLike3`` is used for types where the third type argument is ``env``
+
+To fix CI for tests, execute the following commands separately: is special.
 
 ``Reader`` does not produce ``ReaderLikeN`` interface as other containers.
 

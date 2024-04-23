@@ -8,7 +8,13 @@ See [0Ver](https://0ver.org/).
 
 ## 1.0.0 WIP
 
-### Misc
+###- **Breaking**: renames `.from_successful_io()` to `.from_io()`,
+  there's no need for two separate methods
+- **Breaking**: renames `.from_successful_context()` to `.from_context()`,
+  there's no need for two separate methods
+- **Breaking**: since we now support `.apply()` method,
+
+To fix CI for tests, execute the following commands separately:
 
 - *Breaking*: Remove `success_type` and `failure_type` fields from `IOResult`, `Maybe` and `Result` types
 

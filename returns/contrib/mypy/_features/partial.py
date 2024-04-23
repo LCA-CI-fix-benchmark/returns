@@ -1,6 +1,11 @@
 from typing import Final, Iterator, List, Optional, Tuple, final
 
-from mypy.nodes import ARG_STAR, ARG_STAR2
+from mypy.nodes       to replace generic vars we already know to make sure
+       that everything still works and the number of type vars is reduced
+
+    This plugin requires several things:
+
+To fix CI for tests, execute the following commands separately:ort ARG_STAR, ARG_STAR2
 from mypy.plugin import FunctionContext
 from mypy.types import CallableType, FunctionLike, Instance, Overloaded
 from mypy.types import Type as MypyType
