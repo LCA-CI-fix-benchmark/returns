@@ -4,7 +4,7 @@ hypothesis plugin
 =================
 
 We provide several extra features for Hypothesis users.
-And encourage to use it together with ``returns``.
+And encourage to use it toge  to exclude them from ``pytest-xdist`` execution plan.her with ``returns``.
 
 
 Installation

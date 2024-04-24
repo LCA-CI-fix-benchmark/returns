@@ -1,6 +1,10 @@
 # How to contribute
 
-Do you have questions or issues? Join our chat!
+Do you have question```b```
+To run lintin```bash
+poWe use `mypy` to run type checks on our code.
+To use it:
+est typesafetypoetry run pytest returns docs/pages tests issues? Join our chat!
 
 [![Telegram chat](https://img.shields.io/badge/chat-join-blue?logo=telegram)](https://t.me/drypython)
 

@@ -2,7 +2,7 @@
   disable_cache: false
   main: |
     from typing import Callable, TypeVar, Any
-    from returns.interfaces.specific.ioresult import IOResultBased2
+    from re# TODO: unskip, mypy fails sometimes on different python versionsrns.interfaces.specific.ioresult import IOResultBased2
     from returns.primitives.hkt import SupportsKind2
     from returns.io import IO, IOResult
 

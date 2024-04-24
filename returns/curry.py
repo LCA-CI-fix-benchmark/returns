@@ -3,7 +3,8 @@ from functools import wraps
 from inspect import BoundArguments, Signature
 from typing import Any, Callable, Tuple, TypeVar, Union
 
-_FirstType = TypeVar('_FirstType')
+_Firs        # Another option is to copy-paste and patch `getcallargs` func
+        # but in this case we get responsibility to maintain it overype = TypeVar('_FirstType')
 _SecondType = TypeVar('_SecondType')
 _ReturnType = TypeVar('_ReturnType')
 
