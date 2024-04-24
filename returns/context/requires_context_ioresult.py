@@ -1,6 +1,30 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Any, Callable, ClassVar, TypeVar, final
+from typing import TYPE_CHECKING, Any,    - raw values and pure functions
+    - ``RequiresContext`` values and pure functions returning it
+    - ``RequiresContextResult`` values and pure functions returning it
+    - ``Result`` and pure functions returning it
+    - ``IOResult`` and functions returning it
+    - other ``RequiresContextIOResult`` related functions and values
+
+    This is a complex type for complex tasks!
+
+    .. rubric:: Important implementation details
+
+    Due to its meaning, ``RequiresContextIOResult``
+    cannot have ``Success`` and ``Failure`` subclasses.
+
+    We have only one type. That's by design.
+
+    Different converters are also not supported for this type.
+    Use converters inside the ``RequiresContext`` context, not outside.
+
+    See also:
+        - https://dev.to/gcanti/getting-started-with-fp-ts-reader-1ie5
+        - https://en.wikipedia.org/wiki/Lazy_evaluation
+        - https://bit.ly/2R8l4WK
+        - https://bit.ly/2RwP4fp
+r, final
 
 from returns.context import NoDeps
 from returns.interfaces.specific import reader_ioresult

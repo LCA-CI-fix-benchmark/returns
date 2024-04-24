@@ -1,8 +1,19 @@
 # How to contribute
 
-Do you have questions or issues? Join our chat!
+Do you have questions or issues? Join our cha```
+poetry run pytest typesafety
 
-[![Telegram chat](https://img.shields.io/badge/chat-join-blue?logo=telegram)](https://t.me/drypython)
+**NOTE:** This can take upwards of 20 minutes, only recommended to run if necessary.
+
+Here's [a helpful tutorial](https://sobolevn.me/2019/08/testing-mypy-types) if you are looking
+for more information.
+
+
+## Type checks
+
+We use `mypy` to run type checks on our code.
+To use it:
+shields.io/badge/chat-join-blue?logo=telegram)](https://t.me/drypython)
 
 ## Tutorials
 

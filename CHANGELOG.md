@@ -6,8 +6,21 @@ incremental in minor, bugfixes only are patches.
 See [0Ver](https://0ver.org/).
 
 
-## 1.0.0 WIP
+## 1.0.  because of a complete rewrite- Adds typed `flow` plugin, now it can accept any number of arguments,
+  it now also has *excellent* type inference.
+  
+- Adds typed `pipe` plugin, now it can accept any number of arguments,
+  it now also has good type inference.
+  
+- Adds `managed` pipeline function that is useful
+  for working with stateful computations.ots of new features
 
+- **Breaking**: changes `@safe`, `@impure`, `impure_safe`, `@maybe` semantics:
+  they do not work with `async` functions anymore;
+  now you are forced to use `Future` and its helpers
+  to work with `async` functions
+
+- **Breaking**: renames `Maybe.new` to `Maybe.from_value`.
 ### Misc
 
 - *Breaking*: Remove `success_type` and `failure_type` fields from `IOResult`, `Maybe` and `Result` types
