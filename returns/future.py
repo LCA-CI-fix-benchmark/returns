@@ -559,16 +559,16 @@ class FutureResult(  # type: ignore[type-var]
     Use ``Future[a]`` for operations that cannot fail.
 
     This is a ``Future`` that returns ``Result`` type.
-    By providing this utility type we make developers' lives easier.
-    ``FutureResult`` has a lot of composition helpers
-    to turn complex nested operations into a one function calls.
+By providing this utility type we make developers' lives easier.
+``FutureResult`` has a lot of composition helpers
+to turn complex nested operations into a one function calls.
 
-    .. rubric:: Tradeoffs
+.. rubric:: Tradeoffs
 
-    Due to possible performance issues we move all coroutines definitions
-    to a separate module.
+Due to possible performance issues we move all coroutines definitions
+to a separate module.
 
-    See also:
+See also:
         - https://gcanti.github.io/fp-ts/modules/TaskEither.ts.html
         - https://zio.dev/docs/overview/overview_basic_concurrency
 

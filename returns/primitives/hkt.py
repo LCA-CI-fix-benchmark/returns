@@ -216,19 +216,19 @@ class Kinded(Protocol[_FunctionDefType]):  # type: ignore
 
 
 def kinded(function: _FunctionType) -> Kinded[_FunctionType]:
-    """
-    Decorator to be used when you want to dekind the function's return type.
+"""
+Decorator to be used when you want to dekind the function's return type.
 
-    Does nothing in runtime, just returns its argument.
+Does nothing in runtime, just returns its argument.
 
-    We use a custom ``mypy`` plugin to make sure types are correct.
-    Otherwise, it is currently impossible to properly type this.
+We use a custom ``mypy`` plugin to make sure types are correct.
+Otherwise, it is currently impossible to properly type this.
 
-    Here's an example of how it should be used:
+Here's an example of how it should be used:
 
-    .. code:: python
+.. code:: python
 
-      >>> from typing import TypeVar
+  >>> from typing import TypeVar
       >>> from returns.primitives.hkt import KindN, kinded
       >>> from returns.interfaces.bindable import BindableN
 

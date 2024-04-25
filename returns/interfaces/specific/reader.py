@@ -13,7 +13,7 @@ we need to have two separate interfaces for two separate use-cases:
 - ``ReaderLike2`` is used for types where the second type argument is ``env``
 - ``ReaderLike3`` is used for types where the third type argument is ``env``
 
-We also have two methods and two poinfree helpers
+We also have two methods and two point-free helpers
 for ``bind_context`` composition: one for each interface.
 
 Furthermore, ``Reader`` cannot have ``ReaderLike1`` type,

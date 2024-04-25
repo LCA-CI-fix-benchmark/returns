@@ -74,14 +74,13 @@ class _PartialFunctionReducer(object):
     Here's a quick overview of things that is going on inside:
 
     1. Firstly we create intermediate callable that represents a subset
-       of argument that are passed with the ``curry`` call
-    2. Then, we run typechecking on this intermediate function
-       and passed arguments to make sure that everything is correct
-    3. Then, we subtract intermediate arguments from the passed function
-    4. Finally we run type substitution on newly created final function
-       to replace generic vars we already know to make sure
-       that everything still works and the number of type vars is reduced
-
+   of argument that are passed with the ``curry`` call
+2. Then, we run typechecking on this intermediate function
+   and passed arguments to make sure that everything is correct
+3. Then, we subtract intermediate arguments from the passed function
+4. Finally, we run type substitution on the newly created final function
+   to replace generic vars we already know to make sure
+   that everything still works and the number of type vars is reduced
     This plugin requires several things:
 
     - One should now how ``ExpressionChecker`` from ``mypy`` works

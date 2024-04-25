@@ -12,13 +12,13 @@ It is pretty obvious from its usage:
    to infer the final result
 
 2. When we call the function, we need to check for two things.
-   First, we check that passed argument fits our instance requirement.
-   Second, we check that pipeline functions match.
-   Now we have all arguments to do the real inference.
+First, we check that passed argument fits our instance requirement.
+Second, we check that pipeline functions match.
+Now we have all arguments to do the real inference.
 
 3. We also need to fix generic in method signature.
-   It might be broken, because we add new generic arguments and return type.
-   So, it is safe to reattach generic back to the function.
+It might be broken, because we add new generic arguments and return type.
+So, it is safe to reattach generic back to the function.
 
 Here's when it works:
 
