@@ -75,11 +75,11 @@ class _PartialFunctionReducer(object):
 
     1. Firstly we create intermediate callable that represents a subset
        of argument that are passed with the ``curry`` call
-    2. Then, we run typechecking on this intermediate function
-       and passed arguments to make sure that everything is correct
-    3. Then, we subtract intermediate arguments from the passed function
-    4. Finally we run type substitution on newly created final function
-       to replace generic vars we already know to make sure
+    1. Then, we run typechecking on this intermediate function
+       and the passed arguments to ensure correctness
+    2. Next, we subtract intermediate arguments from the passed function
+    3. Finally, we perform type substitution on the newly created final function
+       to replace generic variables we already know to ensure accuracy
        that everything still works and the number of type vars is reduced
 
     This plugin requires several things:

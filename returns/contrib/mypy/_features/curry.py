@@ -132,7 +132,7 @@ class _CurryFunctionOverloads(object):
         """Generates functions from argument tree."""
         for child in argtree.children:
             self._build_overloads_from_argtree(child)
-            assert child.case  # mypy is not happy  # noqa: S101
+            assert child.case is not None  # Ensures that child.case is not None  # noqa: S101
 
             if not child.children:
                 child.case = Intermediate(child.case).with_ret_type(
