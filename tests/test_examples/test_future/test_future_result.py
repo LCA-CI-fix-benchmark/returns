@@ -48,8 +48,6 @@ async def main() -> IOResultE[Sequence[str]]:
     """
     futures: Sequence[IOResultE[str]] = await asyncio.gather(*_show_titles(3))
     return Fold.collect(futures, IOResultE.from_value(()))
-
-
 if __name__ == '__main__':
     print(asyncio.run(main()))  # noqa: WPS421
     # <IOResult: <Success: (

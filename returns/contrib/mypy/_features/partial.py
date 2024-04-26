@@ -201,7 +201,6 @@ class _PartialFunctionReducer(object):
             return self._default_return_type
         return proper_type(self._case_functions)
 
-
 @final
 class _AppliedArgs(object):
     """Builds applied args that were partially applied."""

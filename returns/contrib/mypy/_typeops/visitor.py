@@ -24,7 +24,6 @@ from mypy.types import (
 )
 
 from returns.contrib.mypy._consts import TYPED_KINDN
-
 # TODO: replace with real `TypeTranslator` in the next mypy release.
 _LEAF_TYPES = (
     UnboundType,
