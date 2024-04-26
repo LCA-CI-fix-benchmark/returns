@@ -136,7 +136,8 @@ def pytest_configure(config) -> None:
             'returns_lawful: all tests under `check_all_laws` ' +
             'is marked this way, ' +
             'use `-m "not returns_lawful"` to skip them.'
-        ),
+        )
+    )
     )
 
 

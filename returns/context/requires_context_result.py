@@ -75,13 +75,11 @@ class RequiresContextResult(  # type: ignore[type-var]
 
     .. rubric:: Important implementation details
 
-    Due it is meaning, ``RequiresContextResult``
-    cannot have ``Success`` and ``Failure`` subclasses.
+    Due to its nature, ``RequiresContextResult`` cannot have subclasses like ``Success`` and ``Failure``.
 
-    We only have just one type. That's by design.
+    We only have one type for this class, and that is by design.
 
-    Different converters are also not supported for this type.
-    Use converters inside the ``RequiresContext`` context, not outside.
+    Different converters are also not supported for this type. Converters should be used inside the ``RequiresContext`` context, not outside.
 
     See also:
         - https://dev.to/gcanti/getting-started-with-fp-ts-reader-1ie5
