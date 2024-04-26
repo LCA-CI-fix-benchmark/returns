@@ -26,7 +26,8 @@ def managed(
     KindN[_IOResultLikeType, _UpdatedType, _SecondType, _ThirdType],
 ]]:
     """
-    Allows to run managed computation.
+    Runs a managed computation and handles resource management.
+    """
 
     Managed computations consist of three steps:
 

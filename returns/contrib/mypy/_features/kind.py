@@ -87,8 +87,8 @@ def dekind(ctx: FunctionContext) -> MypyType:
         ctx.api.fail(_KindErrors.dekind_not_instance, ctx.context)
         return AnyType(TypeOfAny.from_error)
 
-    assert isinstance(kind, Instance)  # mypy requires these lines
-    assert isinstance(kind.args[0], Instance)
+    assert isinstance(kind, Instance), "Kind is not an instance of Instance"  # mypy requires these lines
+    assert isinstance(kind.args[0], Instance), "First argument of kind is not an instance of Instance"
     return kind.args[0].copy_modified(args=_crop_kind_args(kind))
 
 

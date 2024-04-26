@@ -81,10 +81,9 @@ class RequiresContextIOResult(  # type: ignore[type-var]
     - other ``RequiresContextIOResult`` related functions and values
 
     This is a complex type for complex tasks!
-
     .. rubric:: Important implementation details
 
-    Due it is meaning, ``RequiresContextIOResult``
+    Due to its meaning, ``RequiresContextIOResult``
     cannot have ``Success`` and ``Failure`` subclasses.
 
     We only have just one type. That's by design.
