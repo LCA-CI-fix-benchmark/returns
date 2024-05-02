@@ -15,7 +15,6 @@ we need to have two separate interfaces for two separate use-cases:
 
 We also have two methods and two poinfree helpers
 for ``bind_context`` composition: one for each interface.
-
 Furthermore, ``Reader`` cannot have ``ReaderLike1`` type,
 because we need both ``value`` and ``env`` types at all cases.
 
