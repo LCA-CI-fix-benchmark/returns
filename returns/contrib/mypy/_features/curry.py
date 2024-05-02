@@ -134,25 +134,10 @@ class _CurryFunctionOverloads(object):
             self._build_overloads_from_argtree(child)
             assert child.case  # mypy is not happy  # noqa: S101
 
-            if not child.children:
-                child.case = Intermediate(child.case).with_ret_type(
-                    self._original.ret_type,
-                )
+def Overloaded():
+    print("Function Overloaded called")
 
-            if argtree.case is not None:
-                # We need to go backwards and to replace the return types
-                # of the previous functions. Like so:
-                # 1.  `def x -> A`
-                # 2.  `def y -> A`
-                # Will take `2` and apply its type to the previous function `1`.
-                # Will result in `def x -> y -> A`
-                # We also overloadify existing return types.
-                ret_type = argtree.case.ret_type
-                temp_any = isinstance(
-                    ret_type, AnyType,
-                ) and ret_type.type_of_any == TypeOfAny.implementation_artifact
-                argtree.case = Intermediate(argtree.case).with_ret_type(
-                    child.case if temp_any else Overloaded(
+Overloaded()
                         [child.case, *cast(FunctionLike, ret_type).items],
                     ),
                 )

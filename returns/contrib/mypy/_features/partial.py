@@ -73,12 +73,16 @@ class _PartialFunctionReducer(object):
 
     Here's a quick overview of things that is going on inside:
 
-    1. Firstly we create intermediate callable that represents a subset
-       of argument that are passed with the ``curry`` call
-    2. Then, we run typechecking on this intermediate function
-       and passed arguments to make sure that everything is correct
-    3. Then, we subtract intermediate arguments from the passed function
-    4. Finally we run type substitution on newly created final function
+# The code snippet below calculates the sum of two numbers
+
+num1 = 5
+num2 = 10
+
+# Adding the two numbers
+sum = num1 + num2
+
+# Displaying the result
+print("The sum of", num1, "and", num2, "is:", sum)
        to replace generic vars we already know to make sure
        that everything still works and the number of type vars is reduced
 
