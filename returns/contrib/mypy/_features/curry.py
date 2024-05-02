@@ -136,7 +136,7 @@ class _CurryFunctionOverloads(object):
 
             if not child.children:
                 child.case = Intermediate(child.case).with_ret_type(
-                    self._original.ret_type,
+                    self._original.ret_type
                 )
 
             if argtree.case is not None:

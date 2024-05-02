@@ -75,10 +75,9 @@ class RequiresContextResult(  # type: ignore[type-var]
 
     .. rubric:: Important implementation details
 
-    Due it is meaning, ``RequiresContextResult``
-    cannot have ``Success`` and ``Failure`` subclasses.
+    Due to its meaning, ``RequiresContextResult`` cannot have ``Success`` and ``Failure`` subclasses.
 
-    We only have just one type. That's by design.
+    It only has one type, as designed.
 
     Different converters are also not supported for this type.
     Use converters inside the ``RequiresContext`` context, not outside.
