@@ -23,7 +23,6 @@ It is pretty obvious from its usage:
 Here's when it works:
 
 .. code:: python
-
   >>> from returns.pipeline import pipe
 
   >>> def first(arg: int) -> bool:

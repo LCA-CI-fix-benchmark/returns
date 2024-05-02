@@ -227,7 +227,6 @@ def kinded(function: _FunctionType) -> Kinded[_FunctionType]:
     Here's an example of how it should be used:
 
     .. code:: python
-
       >>> from typing import TypeVar
       >>> from returns.primitives.hkt import KindN, kinded
       >>> from returns.interfaces.bindable import BindableN

@@ -567,7 +567,6 @@ class FutureResult(  # type: ignore[type-var]
 
     Due to possible performance issues we move all coroutines definitions
     to a separate module.
-
     See also:
         - https://gcanti.github.io/fp-ts/modules/TaskEither.ts.html
         - https://zio.dev/docs/overview/overview_basic_concurrency
