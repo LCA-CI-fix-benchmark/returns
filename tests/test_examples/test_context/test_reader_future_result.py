@@ -61,9 +61,9 @@ def _show_titles(
 
 
 if __name__ == '__main__':
-    # Let's fetch 3 titles of posts one-by-one, but with async client,
+    # Let's fetch 3 titles of posts one-by-one, but with an async client,
     # because we want to highlight `managed` in this example:
-    managed_httpx = managed(_show_titles(3), _close)
+    managed_httpx = managed(_show_titles(3), _close)  # type: ignore
     future_result = managed_httpx(
         FutureResultE.from_value(httpx.AsyncClient(timeout=5)),
     )
