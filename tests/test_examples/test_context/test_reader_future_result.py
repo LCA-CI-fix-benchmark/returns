@@ -47,23 +47,23 @@ def _fetch_post(
 
 def _show_titles(
     number_of_posts: int,
-) -> RequiresContextFutureResultE[Sequence[str], httpx.AsyncClient]:
+) -> RequiresContextFutureResultE[Sequence[str], httpx.Client]:
     def factory(post: _Post) -> str:
         return post['title']
 
     titles = [
         # Notice how easily we compose async and sync functions:
-        _fetch_post(post_id).map(factory)
+        _fetch_post(post_id).map(factory).run_with_type(httpx.Client)
         # TODO: try `for post_id in (2, 1, 0):` to see how errors work
         for post_id in range(1, number_of_posts + 1)
     ]
-    return Fold.collect(titles, RequiresContextFutureResultE.from_value(()))
+    return Fold.collect(titles, RequiresContextFutureResultE.from_value(httpx.Client()))
 
 
 if __name__ == '__main__':
     # Let's fetch 3 titles of posts one-by-one, but with async client,
     # because we want to highlight `managed` in this example:
-    managed_httpx = managed(_show_titles(3), _close)
+    managed_httpx = managed(_show_titles(3), _close, httpx.AsyncClient)
     future_result = managed_httpx(
         FutureResultE.from_value(httpx.AsyncClient(timeout=5)),
     )
