@@ -25,7 +25,7 @@ def _close(
     client: httpx.AsyncClient,
     raw_value: ResultE[Sequence[str]],
 ) -> FutureResultE[None]:
-    return future_safe(client.aclose)()
+    return future_safe(lambda *args: client.aclose())()
 
 
 def _fetch_post(
@@ -37,7 +37,7 @@ def _fetch_post(
     ] = RequiresContextFutureResultE.ask()
 
     return context.bind_future_result(
-        lambda client: future_safe(client.get)(_URL.format(post_id)),
+        lambda client: future_safe(lambda *args: client.get(_URL.format(post_id)))(),
     ).bind_result(
         safe(tap(httpx.Response.raise_for_status)),
     ).map(
