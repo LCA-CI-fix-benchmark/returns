@@ -66,6 +66,7 @@ if __name__ == '__main__':
     managed_httpx = managed(_show_titles(3), _close)
     future_result = managed_httpx(
         FutureResultE.from_value(httpx.AsyncClient(timeout=5)),
+        httpx.AsyncClient(timeout=5),
     )
     print(anyio.run(future_result.awaitable))  # noqa: WPS421
     # <IOResult: <Success: (
