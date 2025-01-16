@@ -25,7 +25,7 @@ def _close(
     client: httpx.AsyncClient,
     raw_value: ResultE[Sequence[str]],
 ) -> FutureResultE[None]:
-    return future_safe(client.aclose)()
+    return future_safe(lambda: client.aclose())()
 
 
 def _fetch_post(
@@ -67,7 +67,7 @@ if __name__ == '__main__':
     future_result = managed_httpx(
         FutureResultE.from_value(httpx.AsyncClient(timeout=5)),
     )
-    print(anyio.run(future_result.awaitable))  # noqa: WPS421
+    print(anyio.run(lambda: future_result.awaitable))  # noqa: WPS421
     # <IOResult: <Success: (
     #    'sunt aut facere repellat provident occaecati ...',
     #    'qui est esse',
