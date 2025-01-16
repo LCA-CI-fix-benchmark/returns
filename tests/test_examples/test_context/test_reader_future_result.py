@@ -63,10 +63,11 @@ def _show_titles(
 if __name__ == '__main__':
     # Let's fetch 3 titles of posts one-by-one, but with async client,
     # because we want to highlight `managed` in this example:
+    async def get_client() -> httpx.AsyncClient:
+        return httpx.AsyncClient(timeout=5)
+
     managed_httpx = managed(_show_titles(3), _close)
-    future_result = managed_httpx(
-        FutureResultE.from_value(httpx.AsyncClient(timeout=5)),
-    )
+    future_result = managed_httpx(get_client())
     print(anyio.run(future_result.awaitable))  # noqa: WPS421
     # <IOResult: <Success: (
     #    'sunt aut facere repellat provident occaecati ...',
