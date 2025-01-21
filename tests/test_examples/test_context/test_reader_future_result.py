@@ -25,7 +25,10 @@ def _close(
     client: httpx.AsyncClient,
     raw_value: ResultE[Sequence[str]],
 ) -> FutureResultE[None]:
-    return future_safe(client.aclose)()
+    @future_safe  # or future_safe(lambda: client.aclose())
+    async def aclose_client():
+        await client.aclose()
+    return aclose_client()
 
 
 def _fetch_post(
